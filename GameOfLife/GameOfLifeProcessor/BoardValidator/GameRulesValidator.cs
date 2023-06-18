@@ -2,7 +2,7 @@
 
 namespace GameOfLifeProcessor.BoardValidator
 {
-    internal class ValidatorService : IValidator
+    internal class GameRulesValidator : IGameRulesValidator
     {
         public bool WillCellSurvive(IBoardChunk chunk)
         {

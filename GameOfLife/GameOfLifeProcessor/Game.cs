@@ -8,7 +8,7 @@ namespace GameOfLifeProcessor
     {
         private Board _board;
         private readonly IBoardHelperService _boardHelperService = new BoardHelperService();
-        private readonly IValidator _validatorService = new ValidatorService();
+        private readonly IGameRulesValidator _validatorService = new GameRulesValidator();
 
         public Game(int boardWidth, int boardHeight)
         {

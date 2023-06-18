@@ -2,7 +2,7 @@
 
 namespace GameOfLifeProcessor.BoardValidator
 {
-    public interface IValidator
+    public interface IGameRulesValidator
     {
         /// <summary>
         /// Checks if the cell satisfies game conditions so it can stay alive.
