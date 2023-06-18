@@ -2,7 +2,7 @@
 
 namespace GameOfLifeProcessor.BoardHelper
 {
-    internal class BoardHelperService : IBoardHelperService
+    internal class ChunkBoardService : IChunkBoardService
     {
         public IEnumerable<IBoardChunk> GetBoardChunks(IGameBoard board)
         {

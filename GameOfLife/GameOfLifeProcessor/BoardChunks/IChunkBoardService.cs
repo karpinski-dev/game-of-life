@@ -2,7 +2,7 @@
 
 namespace GameOfLifeProcessor.BoardHelper
 {
-    public interface IBoardHelperService
+    public interface IChunkBoardService
     {
         /// <summary>
         /// Gets the 3x3 chunk for every cell on the game board.

@@ -7,7 +7,7 @@ namespace GameOfLifeProcessor
     public class Game
     {
         private Board _board;
-        private readonly IBoardHelperService _boardHelperService = new BoardHelperService();
+        private readonly IChunkBoardService _chunkBoardService = new ChunkBoardService();
         private readonly IGameRulesValidator _validatorService = new GameRulesValidator();
 
         public Game(int boardWidth, int boardHeight)
@@ -24,7 +24,7 @@ namespace GameOfLifeProcessor
 
         public void NextGeneration()
         {
-            var chunks = _boardHelperService.GetBoardChunks(_board).ToList();
+            var chunks = _chunkBoardService.GetBoardChunks(_board).ToList();
 
             for (var y = 0; y < _board.Height; y++)
             {
