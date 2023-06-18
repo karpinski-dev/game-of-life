@@ -49,6 +49,14 @@ namespace GameOfLifeProcessor.GameBoard
                 throw new Exception($"Provided active cells are not valid: {nameof(Create)}");
             }
 
+            var maxY = activeCells.OrderByDescending(c => c.YAxis).First().YAxis;
+            var maxX = activeCells.OrderByDescending(c => c.XAxis).First().XAxis;
+
+            if(Height < maxY || Width < maxX)
+            {
+                throw new Exception($"Some/all provided active cells are outside the board: {nameof(Create)}");
+            }
+
             for (var y = 0; y < Height; y++)
             {
                 for (var x = 0; x < Width; x++)
